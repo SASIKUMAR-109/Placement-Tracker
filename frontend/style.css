@@ -311,63 +311,52 @@ body {
 }
 
 
-#disclaimer-overlay {
+#project-note {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
+    bottom: 20px;
+    right: 20px;
 
-#disclaimer-box {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    max-width: 480px;
-    width: 90%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    border-top: 4px solid var(--color-accent);
-    position: relative;
-    z-index: 10000;
-    margin: 20px;
-}
+    width: 340px;
+    max-width: 90vw;
 
-#disclaimer-box h2 {
-    font-size: 20px;
-    color: var(--color-primary);
-    margin-bottom: 14px;
-}
-
-#disclaimer-box p {
-    font-size: 14px;
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    margin-bottom: 12px;
-}
-
-#disclaimer-box strong {
+    background: var(--color-card);
     color: var(--color-text);
+
+    border-radius: 12px;
+    border-top: 4px solid var(--color-accent);
+
+    padding: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+
+    z-index: 999;
 }
 
-#disclaimer-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--color-primary);
-    color: #ffffff;
+#project-note h4 {
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+#project-note p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+}
+
+#close-note {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+
     border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
+    background: transparent;
+
+    font-size: 22px;
     cursor: pointer;
-    margin-top: 6px;
-    transition: all 0.2s ease;
+
+    color: var(--color-text-muted);
 }
 
-#disclaimer-btn:hover {
-    background-color: var(--color-accent);
+#close-note:hover {
+    color: var(--color-primary);
 }

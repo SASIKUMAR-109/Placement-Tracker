@@ -13,12 +13,11 @@ const tableBody = document.getElementById('table-body')
 let chartInstance = null;
 
 
-const disclaimerOverlay = document.getElementById('disclaimer-overlay');
-const disclaimerBtn = document.getElementById('disclaimer-btn');
+const projectNote = document.getElementById("project-note");
+const closeNote = document.getElementById("close-note");
 
-
-disclaimerBtn.addEventListener('click', function() {
-    disclaimerOverlay.style.display = 'none';
+closeNote.addEventListener("click", () => {
+    projectNote.style.display = "none";
 });
 
 function fillTable(data){
