@@ -16,6 +16,7 @@ let chartInstance = null;
 const disclaimerOverlay = document.getElementById('disclaimer-overlay');
 const disclaimerBtn = document.getElementById('disclaimer-btn');
 
+
 disclaimerBtn.addEventListener('click', function() {
     disclaimerOverlay.style.display = 'none';
 });

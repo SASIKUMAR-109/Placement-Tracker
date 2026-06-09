@@ -337,37 +337,3 @@ body {
     border-top: 4px solid var(--color-accent);
 }
 
-#disclaimer-box h2 {
-    font-size: 20px;
-    color: var(--color-primary);
-    margin-bottom: 14px;
-}
-
-#disclaimer-box p {
-    font-size: 14px;
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    margin-bottom: 12px;
-}
-
-#disclaimer-box strong {
-    color: var(--color-text);
-}
-
-#disclaimer-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--color-primary);
-    color: var(--color-card);
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    margin-top: 6px;
-    transition: all 0.2s ease;
-}
-
-#disclaimer-btn:hover {
-    background-color: var(--color-accent);
-}
