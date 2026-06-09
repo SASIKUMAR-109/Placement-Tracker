@@ -1,0 +1,373 @@
+:root {
+    --color-primary:    #4c1d95;
+    --color-accent:     #7c3aed;
+    --color-background: #faf5ff;
+    --color-card:       #ffffff;
+    --color-text:       #3b0764;
+    --color-text-muted: #6b7280;
+    --color-badge-bg:   #ede9fe;
+    --color-badge-text: #5b21b6;
+    --color-border:     #e9d5ff;
+    --color-row-even:   #faf5ff;
+    --color-row-hover:  #ede9fe;
+    --chart-line:       #7c3aed;
+    --chart-fill:       rgba(124, 58, 237, 0.1);
+    --chart-point:      #4c1d95;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+}
+
+.canvas-style {
+    height: 200px;
+    width: 400px;
+}
+
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-card);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+#search-input {
+    padding: 10px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 15px;
+    width: 350px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    color: var(--color-text);
+    background-color: var(--color-card);
+    border: 1.5px solid var(--color-accent);
+}
+
+#search-btn {
+    padding: 10px 24px;
+    background-color: var(--color-primary);
+    color: var(--color-card);
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+}
+
+#search-btn:hover {
+    background-color: var(--color-accent);
+}
+
+.results-section {
+
+}
+
+.college-info {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--color-card);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--color-accent);
+}
+
+#college-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+#college-location {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+#college-type {
+    display: inline-block;
+    background-color: var(--color-badge-bg);
+    color: var(--color-badge-text);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: var(--color-card);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card label {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.chart-container {
+    background-color: var(--color-card);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-container th {
+    background-color: var(--color-primary);
+    color: var(--color-card);
+    padding: 10px;
+    text-align: left;
+}
+
+.table-container td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.table-container tr:nth-child(even) {
+    background-color: var(--color-row-even);
+}
+
+.table-container tr:hover {
+    background-color: var(--color-row-hover);
+    cursor: default;
+}
+
+.table-wrapper {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.table-wrapper h3 {
+    font-size: 18px;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    padding-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    .header h1 {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    #search-input {
+        width: 220px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .stat-card p {
+        font-size: 20px;
+    }
+
+    .stat-card label {
+        font-size: 11px;
+    }
+
+    .college-info {
+        margin: 10px;
+        padding: 14px;
+    }
+
+    .chart-container {
+        margin: 10px;
+        padding: 12px;
+    }
+
+    .table-wrapper {
+        padding: 0 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .search-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+        gap: 8px;
+    }
+
+    #search-input {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    #search-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .stat-card p {
+        font-size: 24px;
+    }
+
+    .college-info {
+        margin: 8px;
+        padding: 12px;
+    }
+
+    #college-name {
+        font-size: 17px;
+    }
+
+    .chart-container {
+        margin: 8px;
+        padding: 10px;
+    }
+
+    .table-wrapper {
+        padding: 0 8px;
+        overflow-x: auto;
+    }
+
+    .table-container {
+        min-width: 500px;
+    }
+
+    .table-container th,
+    .table-container td {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .table-wrapper h3 {
+        padding-left: 8px;
+        font-size: 15px;
+    }
+}
+
+
+#disclaimer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#disclaimer-box {
+    background-color: var(--color-card);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border-top: 4px solid var(--color-accent);
+}
+
+#disclaimer-box h2 {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: 14px;
+}
+
+#disclaimer-box p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+#disclaimer-box strong {
+    color: var(--color-text);
+}
+
+#disclaimer-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-card);
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: all 0.2s ease;
+}
+
+#disclaimer-btn:hover {
+    background-color: var(--color-accent);
+}

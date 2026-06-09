@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+        <div  class = "header">
+            <h1 > College Placement Tracker</h1>
+        </div>
+        <div class ="search-section">
+                <input type = "text" id = "search-input" placeholder = "Search college name ...">
+                <button id ="search-btn">Search</button>
+        </div>
+          <div id ="results-section" style="display:none;" class ="results-section">
+                <div class="college-info">
+                    <h2 id ="college-name"></h2>
+                    <p id ="college-location"></p>
+                    <p id ="college-type"></p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <label for = "stat-total">Total Students</label>
+                        <p id="stat-total" ></p>
+                        
+                    </div>
+                    <div class="stat-card">
+                        <label for = "stat-placed">Students Placed</label>
+                        <p id="stat-placed"></p>
+                        
+                    </div>
+                    <div class="stat-card">
+                        <label for = "stat-pct">Placement%</label>
+                        <p id="stat-pct"></p>
+                        
+                    </div>
+                </div>
+                <div class = "chart-container">
+                    <canvas id="placement-chart" class="canvas-style"></canvas>
+                </div>
+                <div class ="table-wrapper">
+                    <h3>Year-wise Data </h3>
+                    <table id = "placement-table" class ="table-container">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Branch</th>
+                                <th>Total Students</th>
+                                <th>Students Placed</th>
+                                <th>Placement %</th>
+                                <th>Median Package lpa</th>
+                            </tr>
+                        </thead>
+                        <tbody id = "table-body"></tbody>
+                    </table>
+                </div>
+          </div>      
+          <div id="disclaimer-overlay">
+    <div id="disclaimer-box">
+        <h2>📊 About This Project</h2>
+        <p>
+            This is a <strong>portfolio project</strong> demonstrating a 
+            full-stack data pipeline — Python scraper, SQLite database, 
+            Flask REST API, and interactive dashboard.
+        </p>
+        <p>
+            Data is sourced from <strong>NIRF government rankings (2017–2025)</strong>. 
+            Some placement figures may be inaccurate due to inconsistencies 
+            in the source dataset. The pipeline and visualisation are 
+            fully functional.
+        </p>
+        <button id="disclaimer-btn">Got it, let me explore</button>
+    </div>
+</div>  
+        
+   
+    <script src="script.js"></script>
+</body>
+</html>
