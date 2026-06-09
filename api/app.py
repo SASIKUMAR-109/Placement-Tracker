@@ -3,6 +3,7 @@
 # Library needed: pdfplumber
 # Tables needed: companies, placement_records
 
+from flask import send_from_directory
 from flask import Flask, jsonify, request
 from flask_cors import CORS 
 import sqlite3
@@ -10,9 +11,8 @@ import os
 
 
 def get_db():
-    path = os.path.dirname(r"C:\Users\DELL 3400\OneDrive\Desktop\placement_tracker\api\app.py")
-    path = os.path.dirname(path)
-    path = os.path.join(path, 'database', 'placement.db')
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(base, 'database', 'placement.db')
     conn = sqlite3.connect(path)
     return conn
 
@@ -23,8 +23,13 @@ CORS(app)
 
 
 @app.route("/")
-def object_Return():
-    return jsonify({"status":"api is running"})
+def serve_frontend():
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return send_from_directory(os.path.join(base, 'frontend'), 'index.html')
+@app.route("/frontend/<path:filename>")
+def serve_static(filename):
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return send_from_directory(os.path.join(base, 'frontend'), filename)
 
 @app.route("/api/colleges")
 def get_colleges():
@@ -87,4 +92,6 @@ def get_college_by_id():
             return jsonify ({"college":college_dict, "placements":placement_summary_list})
         
 if __name__ == "__main__":
-    app.run(debug = True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)

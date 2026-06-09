@@ -129,7 +129,7 @@ function searchCollege(event){
                break
             }
     }
-    let url = "http://127.0.0.1:5000/api/college?name=";
+    let url = "/api/college?name=";
     
     if (searchTerm === ""){
         alert("Please enter a college name.");
