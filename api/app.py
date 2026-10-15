@@ -1,4 +1,4 @@
-# TODO: Add PDF scraper for company-level data
+# TODO: Add PDF pipeline for company-level data
 # Source: https://www.nirfindia.org/nirfpdfcdn/YEAR/pdf/Overall/INSTITUTE_ID.pdf
 # Library needed: pdfplumber
 # Tables needed: companies, placement_records

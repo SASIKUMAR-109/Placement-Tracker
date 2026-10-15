@@ -92,8 +92,8 @@ function drawChart(placements){
             tension: 0.3,
             pointRadius: 5,
             backgroundColor: 'rgba(124, 58, 237, 0.1)',
-borderColor: '#7c3aed',
-pointBackgroundColor: '#4c1d95',
+            borderColor: '#7c3aed',
+            pointBackgroundColor: '#4c1d95',
         }]
     },
     options: {

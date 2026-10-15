@@ -8,7 +8,7 @@ import os
 import sqlite3
 from datetime import datetime
 
-db_path = os.path.dirname(r"C:\Users\DELL 3400\OneDrive\Desktop\placement_tracker\scraper\scraper.py")
+db_path = os.path.dirname(r"C:\Users\DELL 3400\OneDrive\Desktop\placement_tracker\pipeline\pipeline.py")
 db_path = os.path.dirname(db_path)
 db_path =os.path.join(db_path, 'database', 'placement.db')
 conn = sqlite3.connect(db_path)

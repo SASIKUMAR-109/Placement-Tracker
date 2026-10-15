@@ -21,14 +21,14 @@ sourced from NIRF government rankings data.
 
 ## How To Run
 1. Install dependencies: pip install -r requirements.txt
-2. Run the scraper: python scraper/scraper.py
+2. Run the pipeline: python pipeline/pipeline.py
 3. Start the API: python api/app.py
 4. Open frontend/index.html in your browser
 5. Or visit http://127.0.0.1:5000/dashboard after starting API
 
 ## Project Structure
 placement_tracker/
-├── scraper/scraper.py     ← CSV parser and data pipeline
+├── pipeline/pipeline.py     ← CSV parser and data pipeline
 ├── database/placement.db  ← SQLite database
 ├── api/app.py             ← Flask REST API
 ├── frontend/              ← HTML CSS JS dashboard
